@@ -45,7 +45,7 @@ abstract class Controller_Rest_Crud extends \Controller_Rest
             $controller_method = strtolower(\Input::method());
             if(\Input::method() == "GET" && $resource == ""){
 
-                // Add the page variable to the method
+                // Add the page/search variables to the method where necessary
                 $page = Input::get("page", 0);
                 $search = Input::get("search", FALSE);
 
